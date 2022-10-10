@@ -1,15 +1,28 @@
 {
+    "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
-        "target": "ES2021",
+        "lib": ["es2022"],
+        "module": "es2022",
+        "target": "es2022",
         "strict": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "module": "commonjs",
-        "noImplicitAny": true,
         "esModuleInterop": true,
+        "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true
+        "moduleResolution": "node",
+        "allowUnusedLabels": false,
+        "allowUnreachableCode": false,
+        "exactOptionalPropertyTypes": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "importsNotUsedAsValues": "error",
+        "checkJs": true,
+        "noImplicitAny": true
     },
     "include": ["./src/**/*.ts", "./jest.config.ts"],
-    "exclude": ["./node_modules"]
+    "exclude": ["./node_modules", "./build", "./coverage"]
 }

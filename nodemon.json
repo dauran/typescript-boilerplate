@@ -1,7 +1,7 @@
 {
     "ignore": [".git", "node_modules", "build"],
     "verbose": true,
-    "exec": "ts-node",
+    "exec": "ts-node --esm",
     "watch": ["src"],
     "ext": "ts,json"
 }
