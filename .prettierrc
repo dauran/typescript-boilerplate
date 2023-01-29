@@ -2,5 +2,19 @@
     "trailingComma": "es5",
     "tabWidth": 4,
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": ["*.ts", "*.mts"],
+        "options": {
+          "parser": "typescript"
+        }
+      },
+      {
+        "files": "*.json",
+        "options": {
+          "tabWidth": 4
+        }
+      }
+    ]
   }
