@@ -1,3 +1,3 @@
-export const helloWorld = (world: string): string => `hello ${world}`
+import { helloWorld } from './hello.js'
 
 console.log(helloWorld('world'))

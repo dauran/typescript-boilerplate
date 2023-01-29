@@ -12,6 +12,10 @@
     "keywords": [],
     "author": "Arnaud Jeulin",
     "type": "module",
+    "exports": "./index.js",
+    "imports": {
+        "#src/*": "./build/*"
+    },
     "devDependencies": {
         "@jest/types": "^29.4.1",
         "@types/jest": "^29.4.0",
