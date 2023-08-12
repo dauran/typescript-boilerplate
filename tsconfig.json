@@ -21,6 +21,8 @@
         "noUnusedParameters": true,
         "checkJs": true,
         "noImplicitAny": true,
+        "rootDir": "./src",
+        "outDir": "./build",
         "baseUrl": "src/",
         "paths": {
             "@/*": ["./*"]

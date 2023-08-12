@@ -9,7 +9,7 @@
         "clean:coverage": "rm -rf ./coverage",
         "clean:all": "rm -rf ./build ./coverage ./node_modules",
         "build": "yarn clean ; tsc",
-        "start": "nodemon ./src/index.ts -w",
+        "start": "tsx --no-cache ./src/index.ts",
         "test:unit": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
         "test:unit:watch": "glob -c \"node --loader tsx --test --watch\" \"./src/**/*.test.ts\"",
         "lint": "eslint --ext .js,.ts .",
