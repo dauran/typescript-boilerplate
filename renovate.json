@@ -1,0 +1,49 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:base"],
+    "addLabels": ["auto: bot"],
+    "lockFileMaintenance": {
+        "enabled": true,
+        "labels": ["auto: merge"],
+        "automerge": true
+    },
+    "packageRules": [
+        {
+            "description": "All the github actions dependencies updates will be merged automatically if passing the CI",
+            "matchManagers": ["github-actions"],
+            "assignAutomerge": true,
+            "labels": ["auto: merge"],
+            "automerge": true,
+            "minimumReleaseAge": "3 days"
+        },
+        {
+            "description": "All the npm dev dependencies updates will be merged automatically if passing the CI",
+            "matchManagers": ["npm"],
+            "matchDepTypes": ["devDependencies"],
+            "labels": ["auto: merge"],
+            "automerge": true,
+            "minimumReleaseAge": "3 days"
+        },
+        {
+            "description": "All the npm dependencies minors and patches updates will be merged automatically if passing the CI",
+            "matchManagers": ["npm"],
+            "matchDepTypes": ["dependencies"],
+            "matchUpdateTypes": ["minor", "patch"],
+            "labels": ["auto: merge"],
+            "automerge": true,
+            "minimumReleaseAge": "3 days"
+        },
+        {
+            "description": "All the npm dependencies major updates will be merged automatically if passing the CI",
+            "matchManagers": ["npm"],
+            "matchDepTypes": ["dependencies"],
+            "matchUpdateTypes": ["major"],
+            "labels": ["auto: merge"],
+            "automerge": true,
+            "minimumReleaseAge": "3 days"
+        }
+    ],
+    "prHourlyLimit": 0,
+    "rebaseWhen": "auto",
+    "schedule": ["37 13 * * 1"]
+}
