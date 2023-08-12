@@ -2,8 +2,7 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true,
-        "jest/globals": true
+        "node": true
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -22,7 +21,6 @@
     ],
     "plugins": [
         "@typescript-eslint",
-        "jest",
         "deprecation",
         "import",
         "node",
@@ -46,7 +44,9 @@
             "files": ["*.test.ts"],
             "rules": {
                 "max-lines": "off",
-                "max-lines-per-function": "off"
+                "max-lines-per-function": "off",
+                "@typescript-eslint/no-unused-vars": "off",
+                "no-unused-vars": "off"
             }
         }
     ]

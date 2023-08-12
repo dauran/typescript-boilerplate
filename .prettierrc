@@ -3,18 +3,29 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
+    "plugins": ["@ianvs/prettier-plugin-sort-imports"],
     "overrides": [
-      {
-        "files": ["*.ts", "*.mts"],
-        "options": {
-          "parser": "typescript"
+        {
+            "files": ["*.ts", "*.mts"],
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": "*.json",
+            "options": {
+                "tabWidth": 4
+            }
         }
-      },
-      {
-        "files": "*.json",
-        "options": {
-          "tabWidth": 4
-        }
-      }
+    ],
+    "importOrder": [
+        "<TYPES>^node:(.*)$",
+        "^node:(.*)$",
+        "",
+        "<TYPES>",
+        "<THIRD_PARTY_MODULES>",
+        "",
+        "<TYPES>^@(.*)",
+        "^@(.*).js"
     ]
-  }
+}
