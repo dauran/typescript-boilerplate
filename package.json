@@ -4,8 +4,8 @@
     "description": "to start a typescript project from scratch",
     "scripts": {
         "start": "nodemon ./src/index.ts -w",
-        "test:unit": "jest",
-        "test:unit:watch": "pnpm test:unit --watchAll",
+        "test:unit": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
+        "test:unit:watch": "glob -c \"node --loader tsx --test --watch\" \"./src/**/*.test.ts\"",
         "lint": "eslint --ext .js,.ts .",
         "format": "prettier --ignore-path .eslintignore --write \"**/*.+(js|ts|json)\""
     },
@@ -17,8 +17,6 @@
         "#src/*": "./build/*"
     },
     "devDependencies": {
-        "@jest/types": "^29.4.1",
-        "@types/jest": "^29.4.0",
         "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "@typescript-eslint/parser": "^5.49.0",
@@ -29,17 +27,16 @@
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-deprecation": "^1.3.3",
         "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-jest": "^27.2.1",
         "eslint-plugin-n": "^15.6.1",
         "eslint-plugin-no-only-tests": "^3.1.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-security": "^1.7.0",
-        "jest": "^29.4.1",
+        "glob": "^10.3.3",
         "prettier": "^2.8.3",
-        "ts-jest": "^29.0.5",
         "ts-node": "^10.9.1",
+        "tsx": "^3.12.7",
         "typescript": "^4.9.4"
     }
 }
