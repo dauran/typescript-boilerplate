@@ -10,8 +10,8 @@
         "clean:all": "rm -rf ./build ./coverage ./node_modules",
         "build": "yarn clean ; tsc",
         "start": "tsx --no-cache ./src/index.ts",
-        "test:unit": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
-        "test:unit:watch": "glob -c \"node --loader tsx --test --watch\" \"./src/**/*.test.ts\"",
+        "test:unit": "find ./src -name '*.test.ts' -exec node --loader tsx --test {} \\;",
+        "test:unit:watch": "find ./src -name '*.test.ts' -exec node --loader tsx --test --watch {} \\;",
         "lint": "eslint --ext .js,.ts .",
         "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.+(js|ts|json)\"",
         "lint:typescript": "tsc --noEmit"
