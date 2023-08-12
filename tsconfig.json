@@ -20,7 +20,11 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "checkJs": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "baseUrl": "src/",
+        "paths": {
+            "@/*": ["./*"]
+        }
     },
     "include": ["./src/**/*.ts", "./jest.config.ts"],
     "exclude": ["./node_modules", "./build", "./coverage"]
