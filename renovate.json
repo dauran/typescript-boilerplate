@@ -45,5 +45,5 @@
     ],
     "prHourlyLimit": 0,
     "rebaseWhen": "auto",
-    "schedule": ["37 13 * * 1"]
+    "schedule": ["* * * * *"]
 }
