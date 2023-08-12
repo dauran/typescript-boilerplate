@@ -7,7 +7,7 @@
         "test:unit": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
         "test:unit:watch": "glob -c \"node --loader tsx --test --watch\" \"./src/**/*.test.ts\"",
         "lint": "eslint --ext .js,.ts .",
-        "format": "prettier --ignore-path .eslintignore --write \"**/*.+(js|ts|json)\""
+        "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.+(js|ts|json)\""
     },
     "keywords": [],
     "author": "Arnaud Jeulin",
