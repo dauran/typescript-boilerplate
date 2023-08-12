@@ -1,3 +1,3 @@
-import { helloWorld } from './hello.js'
+import { helloWorld } from '@/hello.js'
 
 console.log(helloWorld('world'))

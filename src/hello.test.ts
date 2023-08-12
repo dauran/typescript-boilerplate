@@ -1,6 +1,7 @@
-import { describe, it } from 'node:test'
 import { deepEqual } from 'node:assert'
-import { helloWorld } from './hello.js'
+import { describe, it } from 'node:test'
+
+import { helloWorld } from '@/hello.js'
 
 describe('Test Hello World', () => {
     it('helloWorld', () => {
