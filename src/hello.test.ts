@@ -3,8 +3,8 @@ import { describe, it } from 'node:test'
 
 import { helloWorld } from '@/hello.js'
 
-describe('Test Hello World', () => {
-    it('helloWorld', () => {
+await describe('Test Hello World', async () => {
+    await it('helloWorld', () => {
         const result = helloWorld('world')
         const expected = 'hello world'
         deepEqual(result, expected)

@@ -2,9 +2,9 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
         "lib": ["es2022"],
-        "module": "ESNext",
-        "moduleResolution": "nodenext",
-        "target": "es2022",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "target": "ESNext",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
